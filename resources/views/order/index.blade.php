@@ -77,7 +77,7 @@
                                     <div class="d-flex justify-content-between align-items-center my-2">
                                         <div class="">
                                             <h5 class="card-title">{{ $menu->menuName }}</h5>
-                                            <p class="m-0">{{$menu->amount}}</p>
+                                            <p class="m-0">{{$menu->amount}} MMK</p>
                                         </div>
                                         <div class="number">
                                             <span class="minus rounded p-2 bg-primary"><i class="bi bi-dash text-white"></i></span>
@@ -111,118 +111,7 @@
 
                     </div>
 
-{{--                <div class="col-4 mt-4">--}}
-{{--                    <div class="">--}}
-{{--                        <h3 class="mb-2">Order List</h3>--}}
-{{--                        <h4 class="text-center text-secondary m-4 fw-bolder">Grill & Chill <br > <span class="h2 m-3">Restaurant</span> </h4>--}}
 
-{{--                        <div class="d-flex justify-content-between align-items-center">--}}
-{{--                            <div class="">--}}
-{{--                                <p class="fw-bold mb-2">Table Name</p>--}}
-{{--                                <p class="fw-bold"> DATE 2.5.2019</p>--}}
-{{--                            </div>--}}
-{{--                            <h5>Invoice Number: 001</h5>--}}
-{{--                        </div>--}}
-
-{{--                        <table class="table">--}}
-{{--                            <thead>--}}
-{{--                            <tr>--}}
-{{--                                <th>#</th>--}}
-{{--                                <th>Description</th>--}}
-{{--                                <th>QTY</th>--}}
-{{--                                <th>Price</th>--}}
-{{--                                <th>Total</th>--}}
-{{--                                <th>Control</th>--}}
-{{--                            </tr>--}}
-{{--                            </thead>--}}
-{{--                            <tbody>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">1</th>--}}
-{{--                                <td>Original Burger</td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">2</th>--}}
-{{--                                <td> Burger</td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">3</th>--}}
-{{--                                <td>Original </td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">4</th>--}}
-{{--                                <td>Original Burger</td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">5</th>--}}
-{{--                                <td>Original Burger</td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <th scope="row">6</th>--}}
-{{--                                <td>Original Burger</td>--}}
-{{--                                <td>3</td>--}}
-{{--                                <td>$5.99</td>--}}
-{{--                                <td>$17.97</td>--}}
-{{--                                <td>--}}
-{{--                                    <button class="btn btn-sm btn-danger">--}}
-{{--                                        <i class="bi bi-trash3"></i> Cancel--}}
-{{--                                    </button>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                            <tr>--}}
-{{--                                <td colspan="4" class=" text-center">Total Amount</td>--}}
-{{--                                <td></td>--}}
-{{--                            </tr>--}}
-{{--                            </tbody>--}}
-{{--                        </table>--}}
-
-{{--                        <div class="d-flex justify-content-between align-items-center">--}}
-{{--                            <div class="h6 fw-bolder">Thanks For Your Order</div>--}}
-{{--                            <button class="btn btn-primary p-3 h3 text-end">Order Confirm</button>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-
-{{--                </div>--}}
             </div>
         </div>
     </div>
