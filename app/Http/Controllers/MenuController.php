@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class MenuController extends Controller
@@ -60,7 +61,7 @@ class MenuController extends Controller
 
         $menu->save();
 
-//        return redirect()->route('menu.index')->with('status', $menu->menuName .' is added Successfully' );
+        return redirect()->route('menu.index')->with('status', $menu->menuName .' is added Successfully' );
     }
     /**
      * Display the specified resource.
@@ -104,19 +105,24 @@ class MenuController extends Controller
         $menu->user_id = Auth::id();
 //        return $menu;
 
-        $menu->save();
+        if($request->hasFile('featured_image')){
+
+            //delete old photo
+            Storage::delete("public/".$menu->featured_image);
+
+            // update and upload new photo
+            $newName = uniqid()."_featured_image.".$request->file('featured_image')->extension();
+            $request->file('featured_image')->storeAs("public",$newName);
+//            $request->featured_image->storeAs();
+            $menu->featured_image = $newName;
+
+        }
+
+
+        $menu->update();
 
         return redirect()->route('menu.index')->with('status', $menu->menuName .' is added Successfully' );
     }
-
-
-//    public function status_update($id){
-//        // get product status with the help of product ID
-//        $product =DB::table(' product ')
-//            ->select(' status ')
-//        ->where('id' ,' = ',$id)
-//        ->first();
-//    }
 
 
     /**
