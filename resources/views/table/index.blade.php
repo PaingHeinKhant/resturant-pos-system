@@ -15,13 +15,13 @@
 
               <div class="">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary fw-bold me-2" data-bs-toggle="modal" data-target="staticBackdrop">
+                  <button type="button" class="btn btn-primary fw-bold me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       Create Table <i class="bi bi-plus-circle ms-1 fw-bold"></i>
                   </button>
 
                   <!-- Modal -->
                   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-                      <div class="modal-dialog">
+                      <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
                                   <h5 class="modal-title" id="staticBackdropLabel">Create New Category</h5>

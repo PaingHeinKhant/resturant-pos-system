@@ -69,17 +69,17 @@
 
                     <div class="text-center">
 
-                        {{ \App\Models\Menu::all('id') }}
-
                         @foreach(\App\Models\Menu::all() as $menu)
-                            <div class="card  d-inline-block m-3" style="width: 18rem;">
+                            <div class=" d-inline-block m-2 mb-4" style="width: 200px; height: 200px">
                                 @isset($menu->featured_image)
-                                    <img src="{{ asset("storage/".$menu->featured_image) }}" class="card-img-top rounded-top" alt="">
+                                    <div class="object-fit-cover">
+                                        <img src="{{ asset("storage/".$menu->featured_image) }}" class="card-img-top rounded-top h-50" alt="">
+                                    </div>
                                 @endisset
-                                <div class="card-body">
-                                    <h5 class="card-title text-start">{{ $menu->menuName }}</h5>
+                                <div class="py-4">
+                                    <h5 class=" text-start">{{ $menu->menuName }}</h5>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <h4 class="text-danger fw-bolder">$ {{ $menu->amount }}</h4>
+                                        <h4 class="text-danger">$ {{ $menu->amount }}</h4>
                                         @if($menu->menuStatus == 'true')
                                             <div class="btn btn-sm btn-success">
                                                 <i class="bi bi-check2"></i>
@@ -92,7 +92,6 @@
                                             </div>
                                         @endif
                                     </div>
-
                                 </div>
                             </div>
                         @endforeach

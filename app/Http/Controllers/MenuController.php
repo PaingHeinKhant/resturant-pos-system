@@ -60,7 +60,7 @@ class MenuController extends Controller
 
         $menu->save();
 
-//        return redirect()->route('menu.index')->with('status', $menu->menuName .' is added Successfully' );
+        return redirect()->route('menu.index')->with('status', $menu->menuName .' is added Successfully' );
     }
     /**
      * Display the specified resource.
