@@ -31,6 +31,7 @@
                             <div class="m-5 p-0">
                                 @yield('content')
                             </div>
+                            @include('layouts.footer')
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@
 
     <p class="text-black  ">Order and Accountant</p>
     <div class="list-group mb-1">
-        <a class="list-group-item list-group-item-action py-3  side-hover border-0" href="{{route('order.index')}}">
+        <a class="list-group-item list-group-item-action py-3  side-hover border-0" href="{{route('tableCheck')}}">
             <i class="bi bi-list-check fs-5 py-2 px-2 me-3 rounded-3"></i>
             <span class="font-hover text-hover">Table Check</span>
         </a>

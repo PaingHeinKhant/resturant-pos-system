@@ -108,4 +108,9 @@ class TableController extends Controller
         $table->delete();
         return redirect()->route('table.index')->with('status', $table->tableName .' is deleted Successfully' );
     }
+
+    public function tableCheck(){
+        $tables = Table::get();
+        return view('tablecheck.index',compact('tables'));
+    }
 }

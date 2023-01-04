@@ -27,6 +27,8 @@ Route::resource('/table',\App\Http\Controllers\TableController::class);
 Route::resource('/order', \App\Http\Controllers\OrderController::class);
 Route::resource('/cashier',\App\Http\Controllers\CashierController::class);
 Route::resource('/invoice',\App\Http\Controllers\InvoiceController::class);
+Route::get('/tableCheck',[\App\Http\Controllers\TableController::class,'tableCheck'])->name('tableCheck');
+
 
 
 
