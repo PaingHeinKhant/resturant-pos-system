@@ -10,4 +10,8 @@ class Category extends Model
     use HasFactory;
 
     private mixed $itemCategory;
+
+public function menus(){
+    return $this->hasMany(Menu::class);
+}
 }

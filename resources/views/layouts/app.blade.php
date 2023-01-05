@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-
+        
         <main class="">
             @auth
                 <div class="container-fluid">
@@ -32,8 +32,9 @@
                                 @yield('content')
                             </div>
                         </div>
+                        @include('layouts.footer')
                     </div>
-                    @include('layouts.footer')
+
                 </div>
             @endauth
 
