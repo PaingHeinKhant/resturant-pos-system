@@ -13,8 +13,8 @@
             </div>
             <h4 class="mb-2 text-center">Menus</h4>
             @forelse($category->menus as $menu)
-{{--                @if($menu->category->itemCategory == $slug)--}}
-                    <div class="card d-inline-block m-4 text-center" style="width: 18rem; ">
+                    <form action="{{ route('order.store') }}" method="post" enctype="multipart/form-data" class="card d-inline-block m-4 text-center" style="width: 18rem; ">
+                        @csrf
                         @isset($menu->featured_image)
                             <div class="">
                                 <img src="{{ asset("storage/".$menu->featured_image) }}" class="card-img-top" alt="">
@@ -23,13 +23,19 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center my-2">
                                 <div class="">
-                                    <h5 class="card-title">{{ $menu->menuName }}</h5>
-                                    <p class="m-0">{{$menu->amount}} MMK</p>
+                                    <input type="text" value="{{$menu->menuName}}" name="menu" hidden>
+                                    <h5 class="card-title" id="menu" >{{ $menu->menuName }}</h5>
+                                    <input type="text" value="{{$menu->amount}}" name="price" hidden>
+                                    <p class="m-0" name="price">{{$menu->amount}} MMK</p>
                                 </div>
                                 <div class="number">
-                                    <span class="minus rounded p-2 bg-primary"><i class="bi bi-dash text-white"></i></span>
-                                    <input type="text" class="text-center border border-0" style="width: 30px" value="0"/>
-                                    <span class="plus rounded p-2 bg-primary"><i class="bi bi-plus text-white"></i></span>
+                                    <span class="">
+                                        <i class="bi bi-dash text-white btn btn-primary" id="minus"></i>
+                                    </span>
+                                    <input type="text" id="display" name="quantity"  class="text-center border border-0" style="width: 30px" value="0"/>
+                                    <span>
+                                        <i class="bi bi-plus text-white btn btn-primary" id="plus"></i>
+                                    </span>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between align-items-center my-2">
@@ -47,11 +53,14 @@
                                     @endif
                                 </div>
 
-                                <button class="btn btn-outline-primary btn-sm">Add To Cart</button>
+                                <button class="btn btn-outline-primary btn-sm" type="submit">
+                                    <i class="bi bi-plus-circle mb-1"></i>
+                                    Add To Cart
+                                </button>
                             </div>
 
                         </div>
-                    </div>
+                    </form>
 {{--                @endif--}}
             @empty
                 <div class=" ">

@@ -2,11 +2,12 @@
 @section("content")
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-1"></div>
+            <div class="col-10">
                 <div class="mt-4">
                     <div class="">
-                        <h3 class="mb-2">Order Invoice</h3>
-                        <h4 class="text-center text-secondary m-4 fw-bolder">Grill & Chill <br > <span class="h2 m-3">Restaurant</span> </h4>
+                        <h6 class="mb-2">Order Invoice</h6>
+                        <h2 class="text-center text-primary m-4 ">Grill & Chill Restaurant </h2>
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="">
@@ -116,6 +117,7 @@
 
                                 </div>
             </div>
+            <div class="col-1"></div>
         </div>
     </div>
 @stop

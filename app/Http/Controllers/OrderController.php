@@ -37,7 +37,9 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-        //
+//        return $request;
+        $order =new Order();
+
     }
 
     /**
