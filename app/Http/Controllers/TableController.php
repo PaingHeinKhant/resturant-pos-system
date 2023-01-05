@@ -94,7 +94,7 @@ class TableController extends Controller
 
         $table->save();
 
-        return redirect()->route('table.index')->with('status', $table->menuName .' is Updated Successfully' );
+        return redirect()->route('tableCheck')->with('status', $table->menuName .' is Updated Successfully' );
     }
 
     /**

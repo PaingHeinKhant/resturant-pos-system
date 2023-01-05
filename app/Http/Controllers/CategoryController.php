@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
+use App\Models\Menu;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
@@ -58,8 +59,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return redirect()->route('category.index');
+//        return $category;
+        return view('categoryShow.show',compact('category'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -103,5 +106,11 @@ class CategoryController extends Controller
         $category->itemCategory;
         $category->delete();
         return redirect()->route('category.index')->with('status', $category->itemCategory .' is deleted Successfully' );
+    }
+
+    public function categoryShow()
+    {
+        $categories = Category::all();
+        return view('categoryShow.index',compact('categories'));
     }
 }
