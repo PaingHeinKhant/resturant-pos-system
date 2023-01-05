@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('invoiceNumber');
+            $table->string('tableNumber');
+            $table->string('menu');
+            $table->string('quantity');
+            $table->string('price');
+            $table->string('total');
+            $table->string('totalAmount');
             $table->foreignId("table_id");
-            $table->foreignId("category_id");
             $table->foreignId("menu_id");
             $table->timestamps();
         });

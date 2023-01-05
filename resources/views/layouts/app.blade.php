@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        
+    
         <main class="">
             @auth
                 <div class="container-fluid">
